@@ -10,6 +10,7 @@ public class SalaryCalculator {
 
         System.out.println("how many sales did the employee make this week");
         Scanner scanner  = new Scanner(System.in);
+        scanner.close();
         int sales = scanner.nextInt();
         if(sales >=quota){
             salary = salary + bonus;
