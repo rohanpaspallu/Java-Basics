@@ -8,5 +8,8 @@ public class InheritanceTester {
         Square square = new Square();
         square.setLength(4);
         System.out.println(square.calculatePerimeter());
+        square.print();
+        square.print("rohan");
+
     }
 }
