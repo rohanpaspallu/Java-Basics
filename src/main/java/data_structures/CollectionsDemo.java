@@ -6,7 +6,25 @@ public class CollectionsDemo {
     public static void main(String[] args) {
 //        setDemo();
 //        listDemo();
-        queueDemo();
+//        queueDemo();
+        mapDemo();
+    }
+
+    public static void mapDemo() {
+        Map fruitCalories = new HashMap();
+
+        fruitCalories.put("apple", 20);
+        fruitCalories.put("banana", 110);
+        fruitCalories.put("grapes", 10);
+        fruitCalories.put("orange", 60);
+
+
+        System.out.println("Items in hashmap : "+ fruitCalories);
+        fruitCalories.remove("grapes");
+        System.out.println("Items after removal : "+ fruitCalories);
+        System.out.println("Find calories of orange : "+ fruitCalories.get("orange"));
+        System.out.println("Is orange a part of the map ? "+ fruitCalories.containsKey("orange"));
+
     }
 
     private static void queueDemo() {
