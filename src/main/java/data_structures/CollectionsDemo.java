@@ -1,14 +1,29 @@
 package data_structures;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class CollectionsDemo {
     public static void main(String[] args) {
 //        setDemo();
-        listDemo();
+//        listDemo();
+        queueDemo();
+    }
+
+    private static void queueDemo() {
+
+        Queue fruits = new LinkedList();
+
+        fruits.add("apple");
+        fruits.add("banana");
+        fruits.add("orange");
+        fruits.add("lemon");
+
+        System.out.println("Queue of fruits : "+ fruits );
+
+        fruits.remove("lemon");
+        System.out.println("Fruits after remove : "+ fruits);
+        System.out.println("Head of queue :"+ fruits.peek() );
+
     }
 
     public static void listDemo() {
