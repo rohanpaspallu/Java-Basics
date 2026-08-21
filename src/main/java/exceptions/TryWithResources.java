@@ -5,12 +5,11 @@ import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MultipleExceptionHandling {
+public class TryWithResources {
+
     public static void main(String[] args) {
-        Scanner fileReader = null;
         File file = new File("files/numbers.txt");
-        try{
-            fileReader = new Scanner(file);
+        try(Scanner fileReader = new Scanner(file)){
             while (fileReader.hasNext()){
                 System.out.println(fileReader.nextDouble());
             }
@@ -24,9 +23,6 @@ public class MultipleExceptionHandling {
 //        }
         catch(Exception e){
             System.out.println("Parent exception : "+ e.getMessage());
-        }
-        finally {
-            fileReader.close();
         }
 
     }
