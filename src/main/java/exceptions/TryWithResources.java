@@ -11,7 +11,7 @@ public class TryWithResources {
     public static void main(String[] args) {
         File inputFile = new File("files/numbers.txt");
         File outputFile = new File("file/output.txt");
-        try(Scanner fileReader = new Scanner(file); PrintWriter fileWriter = new PrintWriter(outputFile)){
+        try(Scanner fileReader = new Scanner(inputFile); PrintWriter fileWriter = new PrintWriter(outputFile)){
             while (fileReader.hasNext()){
                 fileWriter.println(fileReader.nextDouble());
 //                System.out.println(fileReader.nextDouble());
